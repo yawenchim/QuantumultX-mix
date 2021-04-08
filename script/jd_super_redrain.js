@@ -5,17 +5,17 @@
 
 [task_local]
 #整点京豆雨
-1 0,8-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, tag=整点京豆雨, enabled=true
+1 0,8-23/1 * * * https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js, tag=整点京豆雨, enabled=true
 
 ================Loon==============
 [Script]
-cron "1 0,8-23/1 * * *" script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js,tag=整点京豆雨
+cron "1 0,8-23/1 * * *" script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js,tag=整点京豆雨
 
 ===============Surge=================
- 整点京豆雨 = type=cron,cronexp="1 0,8-23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
+ 整点京豆雨 = type=cron,cronexp="1 0,8-23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js
 
 ============小火箭=========
- 整点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, cronexpr="1 0,8-23/1 * * *",timeout=200, enable=true
+ 整点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js, cronexpr="1 0,8-23/1 * * *",timeout=200, enable=true
  */
 const $ = new Env('整点京豆雨');
 let allMessage = '';
