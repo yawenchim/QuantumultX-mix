@@ -5,4 +5,4 @@ shadowsocks=music.desperadoj.com:30001, method=aes-128-gcm, password=desperadoj.
 shadowsocks=music.desperadoj.com:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2, fast-open=false, udp-relay=false, tag=🎶Music5
 http=music.lolico.me:39000, fast-open=false, udp-relay=false, tag=🎶Music6
 http=block4music.poetyin.me:39000, fast-open=false, udp-relay=false, tag=🎶Music7
-shadowsocks=blockmusic.poetyin.me:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2, fast-open=false, udp-relay=false, tag=🎶Music8
+shadowsocks=block4music.poetyin.me:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2, fast-open=false, udp-relay=false, tag=🎶Music8
