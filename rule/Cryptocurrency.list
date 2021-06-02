@@ -27,6 +27,8 @@ HOST-SUFFIX,coinwind.com,Cryptocurrency
 HOST-SUFFIX,coinwind.pro,Cryptocurrency
 HOST-SUFFIX,sun.io,Cryptocurrency
 HOST-SUFFIX,justswap.io,Cryptocurrency
+HOST-SUFFIX,mainet.infura.io,Cryptocurrency
+HOST-SUFFIX,depth.fi,Cryptocurrency
 
 # Wallet
 HOST-SUFFIX,hbwallet.net,Cryptocurrency
