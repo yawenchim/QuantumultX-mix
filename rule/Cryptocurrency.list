@@ -20,6 +20,8 @@ HOST-SUFFIX,gateway.mdex.cc,Cryptocurrency
 HOST-SUFFIX,http-mainet.hecochain.com,Cryptocurrency
 HOST-SUFFIX,coinwind.com,Cryptocurrency
 HOST-SUFFIX,coinwind.pro,Cryptocurrency
+HOST-SUFFIX,sun.io,Cryptocurrency
+HOST-SUFFIX,justswap.io,Cryptocurrency
 
 # Wallet
 HOST-SUFFIX,hbwallet.net,Cryptocurrency
