@@ -33,3 +33,7 @@ HOST-SUFFIX,depth.fi,Cryptocurrency
 # Wallet
 HOST-SUFFIX,hbwallet.net,Cryptocurrency
 HOST-SUFFIX,mytokenpocket.vip,Cryptocurrency
+
+# Miner
+HOST-SUFFIX,unmineable.com,Cryptocurrency
+HOST-SUFFIX,unminable.com,Cryptocurrency
