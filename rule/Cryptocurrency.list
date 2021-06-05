@@ -21,19 +21,32 @@ HOST-SUFFIX,woodpeckerlog.com,Cryptocurrency
 
 # Defi
 HOST-SUFFIX,mdex.com,Cryptocurrency
-HOST-SUFFIX,gateway.mdex.cc,Cryptocurrency
-HOST-SUFFIX,http-mainet.hecochain.com,Cryptocurrency
+HOST-SUFFIX,mdex.cc,Cryptocurrency
 HOST-SUFFIX,coinwind.com,Cryptocurrency
 HOST-SUFFIX,coinwind.pro,Cryptocurrency
 HOST-SUFFIX,sun.io,Cryptocurrency
 HOST-SUFFIX,justswap.io,Cryptocurrency
-HOST-SUFFIX,mainet.infura.io,Cryptocurrency
 HOST-SUFFIX,depth.fi,Cryptocurrency
+HOST-SUFFIX,coin.top,Cryptocurrency
 
 # Wallet
 HOST-SUFFIX,hbwallet.net,Cryptocurrency
 HOST-SUFFIX,mytokenpocket.vip,Cryptocurrency
+HOST-SUFFIX,tokenpocket.pro,Cryptocurrency
+HOST-SUFFIX,tronlink.org,Cryptocurrency
+
 
 # Miner
 HOST-SUFFIX,unmineable.com,Cryptocurrency
 HOST-SUFFIX,unminable.com,Cryptocurrency
+
+# Chain
+HOST-SUFFIX,hecochain.com,Cryptocurrency
+HOST-SUFFIX,tronalliance.com,Cryptocurrency
+HOST-SUFFIX,trongrid.io,Cryptocurrency
+HOST-SUFFIX,infura.io,Cryptocurrency
+HOST-SUFFIX,binance.org,Cryptocurrency
+
+# Dapp
+HOST-SUFFIX,tronscan.io,Cryptocurrency
+HOST-SUFFIX,tronscan.org,Cryptocurrency
