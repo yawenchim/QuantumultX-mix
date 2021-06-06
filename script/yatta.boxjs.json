@@ -49,9 +49,7 @@
       ],
       "author": "@yawenchim",
       "repo": "https://github.com/yawenchim",
-      "script": ["https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js",
-                "https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_half_redrain.js"
-      ],
+      "script": "https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js",
       "descs_html": [
         "自己动手，丰衣足食"
       ]
