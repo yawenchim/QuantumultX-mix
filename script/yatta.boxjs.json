@@ -43,13 +43,14 @@
           "desc": "半点京豆雨RRA, 默认无需填写, 脚本从远程配置获取。多个ID英文分号间隔;"
         }
       ],
-      "icons": [
+      "icons": 
         "https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png"
       ],
       "author": "@yawenchim",
       "repo": "https://github.com/yawenchim",
       "script": "https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js",
+                "https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_half_redrain.js"
       "descs_html": [
         "自己动手，丰衣足食"
       ]
