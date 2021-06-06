@@ -1,21 +1,21 @@
 /*
- 整点京豆雨，每天6*16豆
+ 整点京豆雨，每天8*16豆
  已支持IOS双京东账号,Node.js支持N个京东账号
  脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 
 [task_local]
 #整点京豆雨
-1 0,8-23/1 * * * https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js, tag=整点京豆雨, enabled=true
+1 0-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, tag=整点京豆雨, enabled=true
 
 ================Loon==============
 [Script]
-cron "1 0,8-23/1 * * *" script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js,tag=整点京豆雨
+cron "1 0-23/1 * * *" script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js,tag=整点京豆雨
 
 ===============Surge=================
- 整点京豆雨 = type=cron,cronexp="1 0,8-23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js
+ 整点京豆雨 = type=cron,cronexp="1 0-23/1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
 
 ============小火箭=========
- 整点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/yawenchim/QuantumultX-mix/master/script/jd_super_redrain.js, cronexpr="1 0,8-23/1 * * *",timeout=200, enable=true
+ 整点京豆雨= type=cron,script-path=https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, cronexpr="1 0-23/1 * * *",timeout=200, enable=true
  */
 const $ = new Env('整点京豆雨');
 let allMessage = '';
@@ -48,55 +48,64 @@ const JD_API_HOST = 'https://api.m.jd.com/api';
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
         return;
     }
-    // await getRedRain();
-
-    let code = await redRainId()
+    let url = rraUrl()
+    console.log(`召唤龙王: ${url}`)
+    let code = await redRainId(url)
+    code = await retryCdn(code, url)
+    console.log(`召唤完成`)
 
     if(!code){
-        $.log(`远程红包雨配置为空，当前没有红包雨`)
+        $.log(`今日龙王🐲出差，天气晴朗☀️，改日再来～\n`)
         return
     }
 
-    console.log(`远程红包雨配置获取成功: ${code}`)
-    let ids = {}
-    for(let i = 0; i < 24 ; i++ ){
-        ids[String(i)] = code
-    }
+    let codeList = code.split(";")
+    console.log(`龙王就位: ${codeList}`)
 
-    let hour = (new Date().getUTCHours() + 8) % 24
-    if (ids[hour]) {
-        $.activityId = ids[hour]
-        $.log(`本地红包雨配置获取成功`)
-    } else {
-        $.log(`无法从本地读取配置，请检查运行时间`)
-        return
-    }
+    for(let codeItem of codeList){
 
-    for (let i = 0; i < cookiesArr.length; i++) {
-        if (cookiesArr[i]) {
-            cookie = cookiesArr[i];
-            $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
-            $.index = i + 1;
-            $.isLogin = true;
-            $.nickName = '';
-            message = '';
-            await TotalBean();
-            console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
-            if (!$.isLogin) {
-                $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/`, {"open-url": "https://bean.m.jd.com/"});
+        let ids = {}
+        for(let i = 0; i < 24 ; i++ ){
+            ids[String(i)] = codeItem
+        }
 
-                if ($.isNode()) {
-                    await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
+        let hour = (new Date().getUTCHours() + 8) % 24
+        if (ids[hour]) {
+            $.activityId = ids[hour]
+            $.log(`RRA: ${codeItem}`)
+        } else {
+            $.log(`无法从本地读取配置，请检查运行时间`)
+            return
+        }
+
+        for (let i = 0; i < cookiesArr.length; i++) {
+            if (cookiesArr[i]) {
+                cookie = cookiesArr[i];
+                $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
+                $.index = i + 1;
+                $.isLogin = true;
+                $.nickName = '';
+                message = '';
+                await TotalBean();
+                console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
+                if (!$.isLogin) {
+                    $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/`, {"open-url": "https://bean.m.jd.com/"});
+
+                    if ($.isNode()) {
+                        await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
+                    }
+                    continue
                 }
-                continue
+                let nowTs = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000
+
+                await receiveRedRain();
+                // await showMsg();
             }
-            let nowTs = new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000
-            
-            await receiveRedRain();
-            // await showMsg();
         }
     }
-    if (allMessage) {
+
+
+    if (allMessage && isNotify()) {
         if ($.isNode()) await notify.sendNotify(`${$.name}`, `${allMessage}`);
         $.msg($.name, '', allMessage);
     }
@@ -176,7 +185,7 @@ function receiveRedRain() {
                             console.log(`领取成功，获得${JSON.stringify(data.lotteryResult)}`)
                             // message+= `领取成功，获得${JSON.stringify(data.lotteryResult)}\n`
                             message += `领取成功，获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆`
-                            allMessage += `京东账号${$.index}${$.nickName || $.UserName}\n领取成功，获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : ''}`;
+                            allMessage += `京东账号${$.index}${$.nickName || $.UserName}\n领取成功，获得 ${(data.lotteryResult.jPeasList[0].quantity)}京豆${$.index !== cookiesArr.length ? '\n\n' : '\n\n'}`;
                         } else if (data.subCode === '8') {
                             console.log(`今日次数已满`)
                             message += `领取失败，本场已领过`;
@@ -194,14 +203,14 @@ function receiveRedRain() {
     })
 }
 
-function redRainId() {
-    let url = 'https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd-live-rain.json'
+function redRainId(url) {
     return new Promise(resolve => {
         let id = ''
         $.get({url}, async (err, resp, data) => {
             try {
                 if (err) {
                     console.log(`${JSON.stringify(err)}`)
+                    id = 'error'
                 } else {
                     if(!!data){
                         id = data.replace(/[\r\n]/g,"")
@@ -216,6 +225,37 @@ function redRainId() {
             }
         })
     })
+}
+
+async function retryCdn(code, url) {
+    if (code === 'error') {
+        let items = url.split("/")
+        let fn = items[items.length-1]
+        let cndUrl = `https://cdn.jsdelivr.net/gh/PJUNYE2/longwang@main/jd-live-rain.json`
+        $.log(`召唤龙王失败, 召唤神龙: ${cndUrl}`)
+        code = await redRainId(cndUrl)
+    }
+
+    return code === 'error' ? '' : code
+}
+
+function rraUrl() {
+    let url = 'https://raw.githubusercontent.com/PJUNYE2/longwang/main/jd-live-rain.json'
+    if($.isNode() && process.env.JD_RRA_URL){
+        url = process.env.JD_RRA_URL
+    }else if($.getdata('jdRRAUrl')){
+        url = $.getdata('jdRRAUrl')
+    }
+    return url
+}
+
+function isNotify() {
+    if($.isNode() && process.env.RAIN_NOTIFY_CONTROL){
+        return process.env.RAIN_NOTIFY_CONTROL != 'false'
+    }else if($.getdata('rainNotifyControl')){
+        return $.getdata('rainNotifyControl') != 'false'
+    }
+    return true
 }
 
 function taskGetUrl(url, body) {
