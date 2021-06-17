@@ -35,6 +35,7 @@ HOST-SUFFIX,mytokenpocket.vip,Cryptocurrency
 HOST-SUFFIX,tokenpocket.pro,Cryptocurrency
 HOST-SUFFIX,tronlink.org,Cryptocurrency
 HOST-SUFFIX,api.hbwalletapi.net,Cryptocurrency
+HOST-SUFFIX,api.quickwallet.io,Cryptocurrency
 
 # Miner
 HOST-SUFFIX,unmineable.com,Cryptocurrency
