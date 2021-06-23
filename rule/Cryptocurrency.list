@@ -47,6 +47,7 @@ HOST-SUFFIX,tronalliance.com,Cryptocurrency
 HOST-SUFFIX,trongrid.io,Cryptocurrency
 HOST-SUFFIX,infura.io,Cryptocurrency
 HOST-SUFFIX,binance.org,Cryptocurrency
+HOST-SUFFIX,http-mainnet-node.huobichain.com,Cryptocurrency
 
 # Dapp
 HOST-SUFFIX,tronscan.io,Cryptocurrency
@@ -55,6 +56,8 @@ HOST-SUFFIX,hogt.com,Cryptocurrency
 HOST-SUFFIX,yfx.com,Cryptocurrency
 HOST-SUFFIX,quickchart.io,Cryptocurrency
 HOST-SUFFIX,ajax.cloudflare.com,Cryptocurrency
+HOST-SUFFIX,api.coingecko.com,Cryptocurrency
+HOST-SUFFIX,min-api.cryptocompare.com,Cryptocurrency
 
 # Swap
 
