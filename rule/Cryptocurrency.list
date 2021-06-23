@@ -44,6 +44,7 @@ HOST-SUFFIX,unminable.com,Cryptocurrency
 # Chain
 HOST-SUFFIX,hecochain.com,Cryptocurrency
 HOST-SUFFIX,tronalliance.com,Cryptocurrency
+HOST-SUFFIX,tronalliance.cc,Cryptocurrency
 HOST-SUFFIX,trongrid.io,Cryptocurrency
 HOST-SUFFIX,infura.io,Cryptocurrency
 HOST-SUFFIX,binance.org,Cryptocurrency
@@ -60,4 +61,5 @@ HOST-SUFFIX,api.coingecko.com,Cryptocurrency
 HOST-SUFFIX,min-api.cryptocompare.com,Cryptocurrency
 
 # Swap
-
+HOST-SUFFIX,justswap.io,Cryptocurrency
+HOST-SUFFIX,just.network,Cryptocurrency
