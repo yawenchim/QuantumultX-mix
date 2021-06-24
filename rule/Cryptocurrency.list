@@ -28,6 +28,8 @@ HOST-SUFFIX,sun.io,Cryptocurrency
 HOST-SUFFIX,justswap.io,Cryptocurrency
 HOST-SUFFIX,depth.fi,Cryptocurrency
 HOST-SUFFIX,coin.top,Cryptocurrency
+HOST-SUFFIX,coin.top,Cryptocurrency
+HOST-SUFFIX,westarter.org,Cryptocurrency
 
 # Wallet
 HOST-SUFFIX,hbwallet.net,Cryptocurrency
@@ -60,6 +62,7 @@ HOST-SUFFIX,ajax.cloudflare.com,Cryptocurrency
 HOST-SUFFIX,api.coingecko.com,Cryptocurrency
 HOST-SUFFIX,min-api.cryptocompare.com,Cryptocurrency
 HOST-SUFFIX,wink.org,Cryptocurrency
+HOST-SUFFIX,api.faviconkit.com,Cryptocurrency
 
 # Swap
 HOST-SUFFIX,justswap.io,Cryptocurrency
