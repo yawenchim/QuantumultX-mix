@@ -64,7 +64,7 @@ HOST-SUFFIX,ajax.cloudflare.com,Cryptocurrency
 HOST-SUFFIX,coingecko.com,Cryptocurrency
 HOST-SUFFIX,min-api.cryptocompare.com,Cryptocurrency
 HOST-SUFFIX,wink.org,Cryptocurrency
-HOST-SUFFIX,api.faviconkit.com,Cryptocurrency
+HOST-SUFFIX,faviconkit.com,Cryptocurrency
 
 # Swap
 HOST-SUFFIX,justswap.io,Cryptocurrency
