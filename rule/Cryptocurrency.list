@@ -1,4 +1,4 @@
-# 交易所
+# CEFI
 HOST-SUFFIX,aex.com,Cryptocurrency
 HOST-SUFFIX,bibox.com,Cryptocurrency
 HOST-SUFFIX,binance.cc,Cryptocurrency
@@ -21,6 +21,7 @@ HOST-SUFFIX,xfilecache.com,Cryptocurrency
 HOST-SUFFIX,woodpeckerlog.com,Cryptocurrency
 HOST-SUFFIX,bitvj.com,Cryptocurrency
 HOST-SUFFIX,bitvk.com,Cryptocurrency
+HOST-SUFFIX,bitderiv.com,Cryptocurrency
 
 # Defi
 HOST-SUFFIX,mdex.com,Cryptocurrency
