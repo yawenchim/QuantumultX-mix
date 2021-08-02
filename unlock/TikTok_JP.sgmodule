@@ -10,10 +10,9 @@
 ;^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$5 302
 ;(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $1$5 302
 
-(?<=_region=)CN(?=&) url 307 JP
+(?<=_region=)CN(?=&) url 307 US
 (?<=&mcc_mnc=)4 url 307 2
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) url 302  $1$5
-(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) url 307 20
 
 [MITM]
 hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
