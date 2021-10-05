@@ -77,6 +77,7 @@ HOST-SUFFIX,coingecko.com,Cryptocurrency
 HOST-SUFFIX,min-api.cryptocompare.com,Cryptocurrency
 HOST-SUFFIX,wink.org,Cryptocurrency
 HOST-SUFFIX,faviconkit.com,Cryptocurrency
+HOST-SUFFIX,sgem.io,Cryptocurrency
 
 # Swap
 HOST-SUFFIX,justswap.io,Cryptocurrency
