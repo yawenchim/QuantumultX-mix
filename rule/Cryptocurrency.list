@@ -37,6 +37,7 @@ HOST-SUFFIX,bitvk.com,Cryptocurrency
 HOST-SUFFIX,bitderiv.com,Cryptocurrency
 HOST-SUFFIX,hbabit.com,Cryptocurrency
 HOST-SUFFIX,pexpay.com,Cryptocurrency
+
 # Defi
 HOST-SUFFIX,mdex.com,Cryptocurrency
 HOST-SUFFIX,mdex.me,Cryptocurrency
@@ -92,6 +93,7 @@ HOST-SUFFIX,just.network,Cryptocurrency
 # News
 HOST-SUFFIX,bishijie.com,Cryptocurrency
 HOST-SUFFIX,blocktempo.com,Cryptocurrency
+HOST-SUFFIX,chainnews.com,Cryptocurrency
 
 # Info
 HOST-SUFFIX,coinmarketcap.com,Cryptocurrency
