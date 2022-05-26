@@ -103,3 +103,6 @@ HOST-SUFFIX,aicoin.cn,Cryptocurrency
 HOST-SUFFIX,bqiapp.com,Cryptocurrency
 HOST-SUFFIX,bqrank.net,Cryptocurrency
 HOST-SUFFIX,chainfeeds.xyz,Cryptocurrency
+
+#NFT
+HOST-SUFFIX,solsea.io,Cryptocurrency
