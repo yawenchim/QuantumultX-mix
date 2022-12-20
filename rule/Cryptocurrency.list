@@ -121,7 +121,10 @@ HOST-SUFFIX,bqrank.net,Cryptocurrency
 HOST-SUFFIX,chainfeeds.xyz,Cryptocurrency
 HOST-SUFFIX,aicoin.com,Cryptocurrency
 HOST-SUFFIX,sardine.ai,Cryptocurrency
+HOST-SUFFIX,mirror.xyz,Cryptocurrency
 
 #NFT
 HOST-SUFFIX,solsea.io,Cryptocurrency
 
+#Hardware Wallet
+HOST-SUFFIX,ledger.com,Cryptocurrency
